@@ -93,6 +93,9 @@ public class GCSOriginConfig {
     @ConfigDefBean(groups = {"ERROR_HANDLING"})
     public GcsOriginErrorConfig gcsOriginErrorConfig;
 
+    @ConfigDefBean(groups = {"POST_PROCESSING"})
+    public GcsOriginPostProcessingConfig postProcessingConfig;
+
     @ConfigDefBean(groups = "CREDENTIALS")
     public GoogleCloudCredentialsConfig credentials = new GoogleCloudCredentialsConfig();
 
@@ -106,4 +109,6 @@ public class GCSOriginConfig {
         );
         return issues;
     }
+
+
 }
